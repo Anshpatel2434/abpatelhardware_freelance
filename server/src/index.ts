@@ -57,6 +57,11 @@ app.use('/api/account', accountRoutes);
 
 logger.info('Routes', 'All API routes registered', { count: 10 });
 
+// Root route (welcome message)
+app.get('/', (req, res) => {
+  res.json({ status: 'ok', message: 'ABPATEL Hardware API Server', health: '/api/health' });
+});
+
 // Health check
 app.get('/api/health', (req, res) => {
   res.json({ status: 'ok', message: 'ABPATEL Hardware API is running', env: isProd ? 'production' : 'development' });

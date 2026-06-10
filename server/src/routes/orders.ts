@@ -10,7 +10,7 @@ import crypto from 'crypto';
 const router = Router();
 
 // ---- Razorpay Setup ----
-const isProd = process.env.NODE_ENV === 'production';
+const isProd = process.env.IS_PROD === 'true';
 const razorpayKeyId = process.env.RAZORPAY_KEY_ID || (isProd ? process.env.RAZORPAY_KEY_ID_PROD : process.env.RAZORPAY_KEY_ID_DEV);
 const razorpayKeySecret = process.env.RAZORPAY_KEY_SECRET || (isProd ? process.env.RAZORPAY_KEY_SECRET_PROD : process.env.RAZORPAY_KEY_SECRET_DEV);
 

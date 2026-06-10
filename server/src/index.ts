@@ -7,7 +7,7 @@ dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 5000;
-const isProd = process.env.NODE_ENV === 'production';
+const isProd = process.env.IS_PROD === 'true';
 const clientUrl = process.env.CLIENT_URL || (isProd ? process.env.CLIENT_URL_PROD : process.env.CLIENT_URL_DEV);
 
 // Middleware

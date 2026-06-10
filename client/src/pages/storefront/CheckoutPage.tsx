@@ -303,7 +303,7 @@ export default function CheckoutPage() {
         orderId: order.id,
       });
 
-      const isProd = import.meta.env.PROD;
+      const isProd = import.meta.env.VITE_IS_PROD === 'true';
       const razorpayKeyId = import.meta.env.VITE_RAZORPAY_KEY_ID || (isProd
         ? import.meta.env.VITE_RAZORPAY_KEY_ID_PROD
         : import.meta.env.VITE_RAZORPAY_KEY_ID_DEV);

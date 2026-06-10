@@ -9,7 +9,7 @@ import { logger } from '../lib/logger.js';
 
 dotenv.config();
 
-const isProd = process.env.NODE_ENV === 'production';
+const isProd = process.env.IS_PROD === 'true';
 const dbUrl = process.env.DATABASE_URL || (isProd ? process.env.DATABASE_URL_PROD : process.env.DATABASE_URL_DEV);
 
 if (!dbUrl) {

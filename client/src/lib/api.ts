@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const isProd = import.meta.env.PROD;
+const isProd = import.meta.env.VITE_IS_PROD === 'true';
 const baseURL = import.meta.env.VITE_API_URL || (isProd ? import.meta.env.VITE_API_URL_PROD : import.meta.env.VITE_API_URL_DEV);
 
 const api = axios.create({
